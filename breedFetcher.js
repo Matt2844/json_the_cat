@@ -1,4 +1,4 @@
-// breedFetcher.js 
+// breedFetcher.js
 
 
 // console.log(request);
@@ -15,11 +15,11 @@ const request = require('request');
 // const http = require('https');
 
 // const url = "https://api.thecatapi.com/v1/breeds/search?q=sib" (this url is specific to one cat breed)
-const url = 'https://api.thecatapi.com/v1/breeds/search/?q='// (this url is specific to all the breeds);
+const url = 'https://api.thecatapi.com/v1/breeds/search/?q=';// (this url is specific to all the breeds);
 
 
 
-// 1. 
+// 1.
 // request(url, (error, response, body) => {
 
 //   const data = JSON.parse(body);
@@ -35,11 +35,11 @@ const url = 'https://api.thecatapi.com/v1/breeds/search/?q='// (this url is spec
 // 3. Access the nfirst entry in the data array and print ou the description. (code in 1.)
 // 4. Dynamic breed name. Allow user to specify breed name using command line-arguments (process.argv.slice(2))
 
-// Setup: 
+// Setup:
 
 // Request = request is above.
 // Const url = "..." is above.
-const breed = process.argv.slice(2);
+
 
 request(`${url}${breed}`, (error, response, body) => {
 
@@ -52,3 +52,6 @@ request(`${url}${breed}`, (error, response, body) => {
   }
 });
 
+
+module.exports = { request };
+module.exports = { fetchBreedDescription };
